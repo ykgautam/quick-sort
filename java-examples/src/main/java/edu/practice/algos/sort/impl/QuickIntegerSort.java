@@ -1,26 +1,39 @@
 package edu.practice.algos.sort.impl;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 import edu.practice.algos.sort.Sort;
 
 public class QuickIntegerSort implements Sort<Integer> {
-//
+
 //	public static void main(String[] args) {
 //		int[] arr = { 10, 30, 5, 3, 20 }; 
 //		int length = arr.length;
 //		QuickIntegerSort qs = new QuickIntegerSort();
 //		qs.quickSortRecursion(arr, 0, length - 1);
 //		qs.printArray(arr);
+	
 //	}
 
 
 	@Override
 	public Collection<Integer> sort(Collection<Integer> t) {
+		List list = new ArrayList();
+		list.add(10);
+		list.add(5);
+		System.out.println(list);
+		
 //		QuickIntegerSort qs = new QuickIntegerSort();
-		quickSortRecursion(Arrays.asList(1,2,3,4));
+		quickSortRecursion((List<List>) Arrays.asList(list));
 		return null;
+	}
+
+	private void quickSortRecursion(List<List> asList) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	private int partition(int[] arr, int low, int high) {
