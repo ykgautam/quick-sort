@@ -15,17 +15,15 @@ public class QuickIntegerSort implements Sort<Integer> {
 //		QuickIntegerSort qs = new QuickIntegerSort();
 //		qs.quickSortRecursion(arr, 0, length - 1);
 //		qs.printArray(arr);
-	
 //	}
-
-
+	
 	@Override
 	public Collection<Integer> sort(Collection<Integer> t) {
 		List list = new ArrayList();
 		list.add(10);
 		list.add(5);
 		System.out.println(list);
-		
+
 //		QuickIntegerSort qs = new QuickIntegerSort();
 		quickSortRecursion((List<List>) Arrays.asList(list));
 		return null;
@@ -33,7 +31,6 @@ public class QuickIntegerSort implements Sort<Integer> {
 
 	private void quickSortRecursion(List<List> asList) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	private int partition(int[] arr, int low, int high) {
@@ -46,7 +43,6 @@ public class QuickIntegerSort implements Sort<Integer> {
 
 			while (arr[high] > pivot) {
 				high--;
-				
 			}
 			if (low <= high) {
 				int temp = arr[low];
