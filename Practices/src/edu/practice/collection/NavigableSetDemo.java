@@ -7,9 +7,9 @@ public class NavigableSetDemo {
 	public static void main(String[] args) {
 		TreeSet<Integer> treeSet = new TreeSet<Integer>();
 		treeSet.add(1000);
-		treeSet.add(2000);
-		treeSet.add(4000);
 		treeSet.add(3000);
+		treeSet.add(4000);
+		treeSet.add(2000);
 		treeSet.add(5000);
 
 		System.out.println(treeSet);
