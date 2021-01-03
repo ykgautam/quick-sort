@@ -4,12 +4,13 @@ public class Test {
 	public static void main(String[] args) {
 
 		Human yash = new Human(100, "yash"); 
-		Human raja = new Human(101, "raja");
-		Human akash = yash;
-  
-		System.out.println(yash == raja);
+		Human raja = new Human(100, "raja");
 		System.out.println(yash.equals(raja));
-
+			
+		/*	
+		
+		Human akash = yash;
+		
 		int hashcodeValue = yash.hashCode();
 		System.out.println("yash's obj hashcode is : " + hashcodeValue);
 		System.out.println("raja's obj hashcode is : " + raja.hashCode());
@@ -26,5 +27,7 @@ public class Test {
 		String str1 = "FB";
 		String str2 = "Ea";
 		System.out.println(str1.hashCode() + " " + str2.hashCode());
-	}	
+		 
+		 */
+	}
 }
