@@ -6,7 +6,7 @@ public class Test {
 		Human yash = new Human(100, "yash"); 
 		Human raja = new Human(101, "raja");
 		Human akash = yash;
-
+  
 		System.out.println(yash == raja);
 		System.out.println(yash.equals(raja));
 
