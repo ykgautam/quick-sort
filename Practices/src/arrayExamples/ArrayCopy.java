@@ -1,6 +1,7 @@
 package arrayExamples;
 
 public class ArrayCopy {
+// 	array copy 
 	void copyArray(int[] n1) {
 		int[] n2= new int[n1.length];
 		System.arraycopy(n1, 0, n2, 0, 2);
