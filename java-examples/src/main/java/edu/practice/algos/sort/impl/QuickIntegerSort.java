@@ -6,7 +6,7 @@ import java.util.Collection;
 import edu.practice.algos.sort.Sort;
 
 public class QuickIntegerSort implements Sort<Integer> {
-	
+
 	@Override
 	public Collection<Integer> sort(Collection<Integer> collectionToSort) {
 		Integer[] array = collectionToSort.toArray(new Integer[0]);
@@ -18,7 +18,7 @@ public class QuickIntegerSort implements Sort<Integer> {
 		int pivot = arr[(low + high) / 2];
 		while (low <= high) {
 			while (arr[low] < pivot) {
-				low++; 
+				low++;
 
 			} // inner while ends here
 
@@ -52,6 +52,5 @@ public class QuickIntegerSort implements Sort<Integer> {
 			System.out.print(i + " ");
 		}
 	}
-
 
 }
