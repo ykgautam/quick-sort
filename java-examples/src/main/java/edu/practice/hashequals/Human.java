@@ -3,7 +3,7 @@ package edu.practice.hashequals;
 public class Human {
 	
 	int adharNumber ;
-	String name;
+	private String name;
 	
 	public Human(int adharNumber, String name) {
 		this.adharNumber = adharNumber;
