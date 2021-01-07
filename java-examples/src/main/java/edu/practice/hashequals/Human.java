@@ -1,15 +1,12 @@
 package edu.practice.hashequals;
-
 public class Human {
-	
-	int adharNumber ;
-	String name;
+	protected int adharNumber ;
+	private String name;
 	
 	public Human(int adharNumber, String name) {
 		this.adharNumber = adharNumber;
 		this.name = name;
 	}
-	
 	@Override
 	public int hashCode() {
 		return adharNumber;
@@ -23,7 +20,6 @@ public class Human {
 			return true;
 		}
 //		System.out.println("hh");
-		
 		if(obj == null) // if obj =null  i.e yash.equals(null)
 		{
 //			System.out.println("aaa");
