@@ -22,8 +22,7 @@ public class JdbcDemo {
 		while(resultSet.next()) {
 			studedentData = resultSet.getInt(1) + " " + resultSet.getString(2);
 			System.out.println(studedentData);
-		}
-		
+		}	
 		statement.close();
 		connection.close();
 	}

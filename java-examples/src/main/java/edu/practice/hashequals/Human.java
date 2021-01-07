@@ -1,6 +1,7 @@
 package edu.practice.hashequals;
 public class Human {
 	protected int adharNumber ;
+	
 	private String name;
 	
 	public Human(int adharNumber, String name) {
