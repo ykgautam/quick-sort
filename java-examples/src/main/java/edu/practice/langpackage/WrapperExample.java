@@ -13,24 +13,7 @@ public class WrapperExample {
 		xxxValueExamples();
 		System.out.println("-----parsexxxExamples --------");
 		parseXxxExamples();
-		System.out.println("-----autoboxingExamples --------");
-		autoboxingExamples();
-	}
 
-	/**
-	 * for Auto-boxing compiler converts automatically primitive int type to wrapper
-	 * Integer object for Auto-unboxing compiler converts automatically wrapper
-	 * Integer object to primitive int
-	 */
-	private static final int autoboxingExamples() {
-		Integer number = 10;
-		System.out.println("Autoboxing example compiler converts automatically int to Integer object " + number);
-
-		Integer i = Integer.valueOf(20);
-		int i1 = i;
-		System.out
-				.println("Autounboxing example compiler converts automatically Integer object to primitive int " + i1);
-		return 0;
 	}
 
 	private static final void parseXxxExamples() {
