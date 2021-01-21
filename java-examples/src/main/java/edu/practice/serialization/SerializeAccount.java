@@ -35,7 +35,7 @@ public class SerializeAccount {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 
-		Account a1 = new Account("Yash", "pavi");
+		Account a1 = new Account("Yash", "gautam");
 		System.out.println("my user name is " + a1.getUserName() + " and my password is " + a1.getPwd());
 
 		FileOutputStream fos = new FileOutputStream("account.ser");
