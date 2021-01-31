@@ -1,7 +1,5 @@
 package edu.practice.datastructure.queue;
 
-import java.util.Queue;
-
 public class QueueImplementation implements QueueInterface {
 	private int[] object;
 	private int front;
@@ -39,23 +37,24 @@ public class QueueImplementation implements QueueInterface {
 
 	public int push(int data) {
 		counter++;
-		if ((front + 1) >= queueSize)
-			resize();
+		if ((front + 1) >= queueSize) {
+			int[] temp = object;
+			queueSize = queueSize * 2;
+			object = new int[queueSize];
+			for (int i = 0; i <= front; i++) {
+				object[i] = temp[i];
+			}
+		}
+//			resize();
 		object[++front] = data;
 		return object[front];
 	}
 
-	public void printqueue() {
+	public void printQueue() {
 		for (int i = 0; i < counter; i++) {
 			System.out.println("value " + object[i]);
 		}
 	}
-
-	public static void main(String[] args) {
-		QueueImplementation q = new QueueImplementation();
-//		q.queueOPerations();
-	}
-
 
 	@Override
 	public QueueImplementation queueOPerations() {
@@ -65,11 +64,10 @@ public class QueueImplementation implements QueueInterface {
 		queue.push(3);
 		queue.push(5);
 
-		queue.printqueue();
+		queue.printQueue();
 
-		System.out.println("3 size " + queue.resize());
-		System.out.println("counetr size " + queue.counter);
-		System.out.println(queue);
+		System.out.println("size " + queue.resize());
+		System.out.println("counter size " + queue.counter);
 		return queue;
 	}
 

@@ -18,7 +18,7 @@ class QueueImplementationTest {
 	void popTest() {
 		QueueImplementation q = new QueueImplementation();
 		Integer actualelement = q.pop();
-		System.out.println(actualelement);
+		System.out.println("actual element aftr pop  " + actualelement);
 		Integer expectedelement = null;
 		assertEquals(expectedelement, actualelement);
 	}
