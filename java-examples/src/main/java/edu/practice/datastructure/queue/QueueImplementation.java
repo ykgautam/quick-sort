@@ -1,10 +1,13 @@
 package edu.practice.datastructure.queue;
 
-public class QueueImplementation {
+import java.util.Queue;
+
+public class QueueImplementation implements QueueInterface {
 	private int[] object;
 	private int front;
 	private int rear;
 	private int queueSize;
+	int counter = 0;
 
 	public QueueImplementation() {
 		queueSize = 3;
@@ -13,19 +16,14 @@ public class QueueImplementation {
 		rear = -1;
 	}
 
-	public void push(int data) {
-		if ((front + 1) >= queueSize)
-			resize();
-		object[++front] = data;
-	}
-
-	private void resize() {
+	public int resize() {
 		int[] temp = object;
 		queueSize = queueSize * 2;
 		object = new int[queueSize];
 		for (int i = 0; i <= front; i++) {
 			object[i] = temp[i];
 		}
+		return object.length;
 	}
 
 	public Integer pop() {
@@ -39,23 +37,40 @@ public class QueueImplementation {
 		return front <= rear;
 	}
 
+	public int push(int data) {
+		counter++;
+		if ((front + 1) >= queueSize)
+			resize();
+		object[++front] = data;
+		return object[front];
+	}
+
+	public void printqueue() {
+		for (int i = 0; i < counter; i++) {
+			System.out.println("value " + object[i]);
+		}
+	}
+
 	public static void main(String[] args) {
+		QueueImplementation q = new QueueImplementation();
+//		q.queueOPerations();
+	}
+
+
+	@Override
+	public QueueImplementation queueOPerations() {
 		QueueImplementation queue = new QueueImplementation();
-		queue.push(1);
+		System.out.println(queue.push(1) + " " + queue.resize());
 		queue.push(2);
 		queue.push(3);
-		queue.push(4);
 		queue.push(5);
-		queue.push(6);
-		queue.push(7);
-		System.out.println("1 " + queue.pop());
-		System.out.println("2 " + queue.pop());
-		System.out.println("3 " + queue.pop());
-		System.out.println("4 " + queue.pop());
-		System.out.println("5 " + queue.pop());
-		System.out.println("6 " + queue.pop());
-		System.out.println("7 " + queue.pop());
 
+		queue.printqueue();
+
+		System.out.println("3 size " + queue.resize());
+		System.out.println("counetr size " + queue.counter);
+		System.out.println(queue);
+		return queue;
 	}
 
 }
