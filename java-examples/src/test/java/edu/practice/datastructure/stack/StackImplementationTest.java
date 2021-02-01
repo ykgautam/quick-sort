@@ -14,10 +14,12 @@ class StackImplementationTest {
 		stack.push(40);
 		stack.pop();
 		stack.push(30);
+		stack.pop();
+		stack.pop();
 		stack.push(50);
 		int size = stack.getSize();
 		System.out.println(size);
-		assertEquals(3, size);
+		assertEquals(1, size);
 	}
 
 	@Test
@@ -30,14 +32,6 @@ class StackImplementationTest {
 		assertEquals(0, s);
 	}
 
-	@Test
-	void decreaseStackSizeTest() {
-		StackImplementation stack = new StackImplementation();
-		int actualSize = stack.decreaseStackSize();
-		System.out.println("q size  " + actualSize);
-		assertEquals(4, actualSize);
-	}
-	
 	@Test
 	void isEmptyTest() {
 		StackImplementation stack = new StackImplementation();

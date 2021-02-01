@@ -15,20 +15,24 @@ public class StackImplementation implements Stack {
 	public int push(int data) {
 		System.out.println(data);
 		if (top >= stackSize / 2) {
-			int[] temp = object;
-			stackSize = stackSize * 2;
-			object = new int[stackSize];
-			for (int i = 0; i <= top; i++)
-				object[i] = temp[i];
-			return object.length;
+			increaseStackSize();
 		}
 		object[++top] = data;
 		size++;
 		return size;
 	}
 
-	int decreaseStackSize() {
-		if (top == (stackSize / 2) - 1) {
+	private int increaseStackSize() {
+		int[] temp = object;
+		stackSize = stackSize * 2;
+		object = new int[stackSize];
+		for (int i = 0; i <= top; i++)
+			object[i] = temp[i];
+		return object.length;
+	}
+
+	private int decreaseStackSize() {
+		if (top == (stackSize / 2)) {
 			int[] temp = object;
 			stackSize = stackSize * (3 / 4);
 			object = new int[stackSize];
