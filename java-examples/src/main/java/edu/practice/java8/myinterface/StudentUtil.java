@@ -5,7 +5,7 @@ import java.util.List;
 
 import edu.practice.java8.model.Student;
 
-public interface StudentInterface {
+public interface StudentUtil {
 	default public List<Student> sortStudents(List<Student> studentList) {
 		Collections.sort(studentList);
 		return studentList;

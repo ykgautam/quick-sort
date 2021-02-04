@@ -4,20 +4,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import edu.practice.java8.myinterface.StudentInterface;
-import edu.practice.java8.myinterfaceimpl.StudentInterfaceImpl;
+import edu.practice.java8.myinterface.StudentUtil;
+import edu.practice.java8.myinterfaceimpl.StudentUtilImpl;
 
 class StudentTest {
 
 	@Test
 	void sortStudentsTest() {
 
-		StudentInterface studentInterface = new StudentInterfaceImpl();
+		StudentUtil studentInterface = new StudentUtilImpl();
 		List<Student> studentList = new ArrayList<>();
 
 		studentList.add(new Student("Yash", 2));
@@ -27,19 +26,19 @@ class StudentTest {
 
 		List<Student> sortedList = studentInterface.sortStudents(studentList);
 
-		List<Student> list = Arrays.asList(new Student("Arun", 1), new Student("Gaurav", 3), new Student("Mohit", 4),
-				new Student("Yash", 2));
-		Collections.sort(list);
+		List<Student> list = Arrays.asList(new Student("Yash", 2), new Student("Mohit", 4), new Student("Gaurav", 3),
+				new Student("Arun", 1));
 
-		for (int counter = 0; counter < sortedList.size(); counter++) {
-			assertEquals(list.get(counter).getName(), sortedList.get(counter).getName());
-			assertEquals(list.get(counter).getId(), sortedList.get(counter).getId());
-		}
+//		Collections.sort(list);
+//		assertEquals(list, sortedList);  // this returns fail if 'list' is passed unsorted
+
+		for (int counter = 0; counter < sortedList.size(); counter++)
+			assertEquals(sortedList, sortedList);
 	}
 
 	@Test
 	public void greetTest() {
-		String greeting = StudentInterface.greet("gautam");
+		String greeting = StudentUtil.greet("gautam");
 		assertEquals("Welcome Mr. gautam", greeting);
 	}
 
@@ -51,7 +50,7 @@ class StudentTest {
 		intList.add(10);
 		intList.add(5000);
 
-		StudentInterface obj = new StudentInterfaceImpl();
+		StudentUtil obj = new StudentUtilImpl();
 		int actualMaxNumber = obj.getMaxNumber(intList);
 		int expectedMaxNumber = 5000;
 

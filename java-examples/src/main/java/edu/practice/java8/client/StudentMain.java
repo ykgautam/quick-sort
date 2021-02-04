@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.practice.java8.model.Student;
-import edu.practice.java8.myinterface.StudentInterface;
-import edu.practice.java8.myinterfaceimpl.StudentInterfaceImpl;
+import edu.practice.java8.myinterface.StudentUtil;
+import edu.practice.java8.myinterfaceimpl.StudentUtilImpl;
 
 public class StudentMain {
 
 	public static void main(String[] args) {
-		StudentInterface studentInterface = new StudentInterfaceImpl();
+		StudentUtil studentInterface = new StudentUtilImpl();
 
 		List<Student> studentList = new ArrayList<>();
 
@@ -27,7 +27,7 @@ public class StudentMain {
 					"student's name is " + student.getName().toUpperCase() + " " + " and id is " + student.getId());
 
 		System.out.println();
-		System.out.println(StudentInterface.greet("Yash"));
+		System.out.println(StudentUtil.greet("Yash"));
 
 		List<Integer> intList = new ArrayList<>();
 		intList.add(1000);
