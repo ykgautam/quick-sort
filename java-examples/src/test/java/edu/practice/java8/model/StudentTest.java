@@ -32,8 +32,7 @@ class StudentTest {
 //		Collections.sort(list);
 //		assertEquals(list, sortedList);  // this returns fail if 'list' is passed unsorted
 
-//		for (int counter = 0; counter < sortedList.size(); counter++)
-			assertEquals(sortedList, sortedList);
+		assertEquals(sortedList, sortedList);
 	}
 
 	@Test
