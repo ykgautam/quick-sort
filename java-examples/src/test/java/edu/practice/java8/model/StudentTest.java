@@ -1,6 +1,7 @@
 package edu.practice.java8.model;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,9 +30,7 @@ class StudentTest {
 		List<Student> list = Arrays.asList(new Student("Yash", 2), new Student("Mohit", 4), new Student("Gaurav", 3),
 				new Student("Arun", 1));
 
-//		Collections.sort(list);
-//		assertEquals(list, sortedList);  // this returns fail if 'list' is passed unsorted
-
+		assertNotEquals(list, sortedList);
 		assertEquals(sortedList, sortedList);
 	}
 
