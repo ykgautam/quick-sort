@@ -10,7 +10,7 @@ class DoublyLinkedListTest {
 	void test() {
 		fail("Not yet implemented");
 	}
-	void DoublyLinkedListTest() {
+	void doublyLinkedListTest() {
 		DoublyLinkedList d=new DoublyLinkedList();
 		
 	}
