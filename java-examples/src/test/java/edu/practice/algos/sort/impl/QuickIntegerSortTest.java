@@ -1,7 +1,6 @@
 package edu.practice.algos.sort.impl;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -25,5 +24,4 @@ public class QuickIntegerSortTest {
 		Collection<Integer> actualSortedList = quickIntegerSort.sort(list);
 		assertEquals(actualSortedList, Arrays.asList(1, 2, 3, 5));
 	}
-
 }
